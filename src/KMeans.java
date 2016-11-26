@@ -100,7 +100,12 @@ public class KMeans {
             out.print(" ");
             for (int p = 0; p < cluster.points.size(); p++) {
                 Point po = (Point) cluster.points.get(p);
-                out.print(po.id + ",");
+                if (p == cluster.points.size() - 1) {
+                    out.print(po.id);
+                } else {
+                    out.print(po.id + ",");
+                }
+
             }
             out.println();
         }
