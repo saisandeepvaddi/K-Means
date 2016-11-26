@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b79ab62c-f7cc-4eaa-bc92-fcc3ec8be605" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/K-Means/KMeans.class" afterPath="$PROJECT_DIR$/out/production/K-Means/KMeans.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.data" afterPath="$PROJECT_DIR$/output.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KMeans.java" afterPath="$PROJECT_DIR$/src/KMeans.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,8 +26,8 @@
       <file leaf-file-name="KMeans.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/KMeans.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -611,7 +611,7 @@
       <updated>1480127278242</updated>
       <workItem from="1480127284312" duration="14302000" />
       <workItem from="1480174216251" duration="34000" />
-      <workItem from="1480189676735" duration="144000" />
+      <workItem from="1480189676735" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="Update Sum of Squared Error (SSE)">
       <created>1480140337932</created>
@@ -627,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480141353230</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remove printing comma after last point in the cluster">
+      <created>1480189869032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1480189869032</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14480000" />
+    <option name="totallyTimeSpent" value="15247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -677,7 +684,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Sum of Squared Error (SSE)" />
     <MESSAGE value="Add input.data inside src to allow cmd compile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add input.data inside src to allow cmd compile" />
+    <MESSAGE value="Remove printing comma after last point in the cluster" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove printing comma after last point in the cluster" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -687,7 +695,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/KMeans.java</url>
-          <line>112</line>
+          <line>111</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
@@ -799,8 +807,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KMeans.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

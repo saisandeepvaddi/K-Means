@@ -105,7 +105,6 @@ public class KMeans {
                 } else {
                     out.print(po.id + ",");
                 }
-
             }
             out.println();
         }
@@ -158,21 +157,14 @@ public class KMeans {
             Centroid centroid = (Centroid) centroids.get(i);
             cluster.id = centroid.id;
             cluster.centroid = centroid;
-//            List cPoints = new ArrayList<Point>();
-
             for (int p = 0; p < points.size(); p++) {
                 Point point = (Point) points.get(p);
                 if (point.centroid.id == centroid.id) {
-//                    cPoints.add(point);
                     cluster.points.add(point);
                 }
             }
-
             clusters.add(cluster);
-
-
         }
-
 
         return clusters;
     }
