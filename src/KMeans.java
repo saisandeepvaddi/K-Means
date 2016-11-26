@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 
 class Cluster {
     public int id = 0;
-    public Centroid c = null;
+    public Centroid centroid = null;
     public List points = new ArrayList<Point>();
 }
 
@@ -45,12 +45,16 @@ class Point {
 public class KMeans {
     static List points = new ArrayList<Point>();
     static List centroids = new ArrayList<Centroid>();
+    static List clusters = null;
+    static int k = 0;
 
     public static void main(String[] args) throws IOException {
-        int k = Integer.parseInt(args[0]);
+        k = Integer.parseInt(args[0]);
         BufferedReader in = new BufferedReader(new FileReader(args[1].toString()));
         BufferedReader centroidFile = new BufferedReader(new FileReader("initialSeeds.data"));
-        PrintWriter out = new PrintWriter(new FileWriter(args[2].toString()));
+        File outputFile = new File(args[2].toString());
+        outputFile.createNewFile();
+        PrintWriter out = new PrintWriter(new FileWriter(outputFile));
         StringTokenizer tokenizer = null;
         String line = "";
 
@@ -88,7 +92,7 @@ public class KMeans {
             centroids.add(centroid);
         }
 
-        List clusters = coreAlgorithm();
+        clusters = coreAlgorithm();
 
         for (int cl = 0; cl < clusters.size(); cl++) {
             Cluster cluster = (Cluster) clusters.get(cl);
@@ -101,9 +105,27 @@ public class KMeans {
             out.println();
         }
 
+        double sse = computeSSE();
+        out.println();
+        out.println("Validation: ");
+        out.println("Sum of Squared Error: " + sse);
 
         in.close();
         out.close();
+    }
+
+    private static double computeSSE() {
+        double sse = 0.0d;
+        for (int i = 0; i < k; i++) {
+            Cluster cluster = (Cluster) clusters.get(i);
+            Centroid centroid = cluster.centroid;
+            List points = cluster.points;
+            for (Object point : points) {
+                double distance = getEucledianDistance((Point) point, centroid);
+                sse += distance * distance;
+            }
+        }
+        return sse;
     }
 
     private static List coreAlgorithm() {
@@ -130,6 +152,7 @@ public class KMeans {
             Cluster cluster = new Cluster();
             Centroid centroid = (Centroid) centroids.get(i);
             cluster.id = centroid.id;
+            cluster.centroid = centroid;
 //            List cPoints = new ArrayList<Point>();
 
             for (int p = 0; p < points.size(); p++) {
